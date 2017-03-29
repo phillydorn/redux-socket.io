@@ -53,7 +53,7 @@ function createSocketIoMiddleware(socket) {
       matched = option(type, action);
     } else if (typeof option === 'string') {
       // String prefix
-      matched = type.indexOf(option) === 0;
+      matched = type.indexOf && type.indexOf(option) === 0;
     } else if (Array.isArray(option)) {
       // Array of types
       matched = option.some(function (item) {
